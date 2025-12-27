@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
 import { Button } from "./Button";
-import { Mail, Linkedin, Github, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin } from "lucide-react";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
