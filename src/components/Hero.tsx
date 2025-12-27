@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
 import { Button } from "./Button";
@@ -27,6 +28,24 @@ export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="max-w-4xl mx-auto text-center space-y-8">
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="flex justify-center"
+        >
+          <div className="relative w-48 h-48 md:w-56 md:h-56">
+            <Image
+              src="/sudhakar-photo.png"
+              alt="Sudhakar Soni"
+              fill
+              className="rounded-full object-cover border-4 border-blue-600 shadow-2xl"
+              priority
+            />
+          </div>
+        </motion.div>
+
         {/* Animated Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
